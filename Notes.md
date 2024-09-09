@@ -27,6 +27,30 @@ This is the main entry point to our app. Within the body we have a div element w
 5. **package.json file**: This file contains the metadata for our project. <br>
 ![image](https://github.com/user-attachments/assets/f16d656f-9cbc-48a5-9266-b2b99f1ea44c)<br><br>
 
+## Components
+Creating and exporting component:<br>
+![image](https://github.com/user-attachments/assets/a3084299-5b61-4a5b-9e6e-6551604a79e7)<br><br>
+Using a component in another component:<br>
+![image](https://github.com/user-attachments/assets/8bfeb570-56b3-4de4-9ce3-be3e8dc7e682)<br><br>
+
+Note: JSX element can only return a single element. See below, this produces an error:<br>
+![image](https://github.com/user-attachments/assets/76f69e5f-d3f6-4c8d-8c3f-6c86e7394a5d)<br><br>
+The solution for this is to enclose all the elements in a fragment. <></> is called a fragment. See below:<br>
+![image](https://github.com/user-attachments/assets/99a3906a-4dd2-49a5-b1d3-5505ce279517)<br><br>
+
+Adding JS in JSX components:<br>
+We can insert JS in JSX component using {}. We write JS code inside {}. See below:<br>
+![image](https://github.com/user-attachments/assets/8789b565-8be3-4685-9d92-45a45d86032e)<br><br>
+Using JS variable in components:<br>
+![image](https://github.com/user-attachments/assets/ca05b642-2340-4c03-ae22-221bdc854dab)<br><br>
+
+
+
+
+
+
+
+
 
 
 
