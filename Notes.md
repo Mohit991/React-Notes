@@ -44,6 +44,18 @@ We can insert JS in JSX component using {}. We write JS code inside {}. See belo
 Using JS variable in components:<br>
 ![image](https://github.com/user-attachments/assets/ca05b642-2340-4c03-ae22-221bdc854dab)<br><br>
 
+Creating Card component and rendering it in app component:<br>
+![image](https://github.com/user-attachments/assets/13e1cd9e-117c-4e90-a6dd-6ad4a92ce4c1)<br><br>
+
+App component:<br>
+![image](https://github.com/user-attachments/assets/977daa07-0228-40c2-bd07-1529c6f028c9)<br><br>
+
+Output:<br>
+![image](https://github.com/user-attachments/assets/12bff7f3-e599-4e90-8835-5371741b58b5)<br><br>
+
+
+
+
 
 
 
