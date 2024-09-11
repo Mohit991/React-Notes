@@ -98,29 +98,41 @@ Defining Styles:
 Applying:  
 **style={styles}**  
 
-External CSS is good for complex projects with many components. Modules for individual components. Inline for small components and individual styles. 
+External CSS is good for complex projects with many components. Modules for individual components. Inline for small components and individual styles.  
+
+## Props
+They are read only properties that are shared between components. A parent component can send data to a child component.  
+
+`<Component key=value />`  
+
+See the Student Component:  
+<img width="586" alt="image" src="https://github.com/user-attachments/assets/2ef10928-1118-4135-aee4-3df9e2c436f9">  
+
+We take **props** as input to the student function. 
+We use props.name, props.age, props.isStudent values from the prop in the component. 
+_Booleans do not show directly in the DOM. To show, we usually use ternary opertor (?:)._  
+
+See the app component:  
+
+<img width="439" alt="image" src="https://github.com/user-attachments/assets/4bc00a8c-3075-4e23-a079-cd0465fa1d04">  
+
+Here we call the Student component and pass name, age and isStudent values to it. See that we pass number and boolean inside {}. 
+
+Using Student component multiple times in app component and passing different props each time:  
+<img width="441" alt="image" src="https://github.com/user-attachments/assets/3b067e77-d4c6-4299-987e-4180c3b9d0c8">  
+
+Output:  
+<img width="477" alt="image" src="https://github.com/user-attachments/assets/b82c1608-7a08-4928-a6b6-f524996fe61a">  
+
+### Default Props: 
+Default values for the props in case if they are not sent from the parent component.  
+<img width="642" alt="image" src="https://github.com/user-attachments/assets/a88deb19-c063-415d-a9a8-e7f77df5d96b">  
+
+<img width="614" alt="image" src="https://github.com/user-attachments/assets/776a13ed-0fb8-4543-9dcb-fe16fe7c7ffe">  
+
+If we dont pass any value for name, it takes the default value. 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-   
 
 
 
