@@ -132,6 +132,23 @@ Default values for the props in case if they are not sent from the parent compon
 
 If we dont pass any value for name, it takes the default value. 
 
+## Conditional Rendering:  
+It allows you to control what gets rendered based on certain conditions.  
+See App.jsx:  
+<img width="610" alt="image" src="https://github.com/user-attachments/assets/da70e9e4-8fc4-4c45-a390-bc53644c6a23">  
+
+See condition rendering in UserGreeting.jsx using if else:  
+<img width="638" alt="image" src="https://github.com/user-attachments/assets/487ab64f-de85-4a17-bf7f-d2753cac9166">  
+
+See condition rendering in UserGreeting.jsx using ternery operator:  
+
+<img width="449" alt="image" src="https://github.com/user-attachments/assets/21992888-fd8a-49be-b5da-7e966df2029d">  
+
+
+
+
+
+
 
 
 
