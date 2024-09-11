@@ -96,7 +96,7 @@ Defining Styles:
 
 
 Applying:  
-**<button style={styles}>Click me</button>**  
+**style={styles}**  
 
 External CSS is good for complex projects with many components. Modules for individual components. Inline for small components and individual styles. 
 
