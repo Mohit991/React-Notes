@@ -53,6 +53,57 @@ App component:<br>
 Output:<br>
 ![image](https://github.com/user-attachments/assets/12bff7f3-e599-4e90-8835-5371741b58b5)<br><br>
 
+Applying styles to components:<br>
+<img width="416" alt="image" src="https://github.com/user-attachments/assets/3468c164-e568-4f4a-bfeb-69dc2f23c040"><br><br>
+
+1. We can apply External CSS by applying styles in index.css which is global CSS. <br>
+Button component:<br>
+<img width="437" alt="image" src="https://github.com/user-attachments/assets/513659a9-9eb1-4b79-bcec-5859bab6825a"><br><br>
+
+Styles are defined in index.css <br>
+<img width="509" alt="image" src="https://github.com/user-attachments/assets/c45d5d4b-d6ed-42fe-8094-f2ab1fa8e221"><br><br>
+
+But this may lead to naming conflicts. <br>
+
+2. We can create a dedicated sylesheet specifically for each component. This is called modules. What we can do is create folder inside the component folder. One seperate folder for each component. This folder will have the component and stylesheet. <br>
+See the folder structure:  <br> <br>
+<img width="242" alt="image" src="https://github.com/user-attachments/assets/e362688e-fa27-42b4-af5f-91360fa43129"> <br> <br>
+
+Button component:<br>
+<img width="529" alt="image" src="https://github.com/user-attachments/assets/0ad93e17-391c-42f2-8b7e-fc8e58f1bb4a"> <br><br>
+
+import: **import styles from './Button.module.css'** <br>
+Applying class: **className={styles.button}** <br>
+
+Module will be dedicated to a single component. There will be no naming conficts becase a unique class will be generated for you via a hashing alorithm. 
+See **Button.module.css** file:  
+<img width="536" alt="image" src="https://github.com/user-attachments/assets/bdd51dae-e6c4-4497-8d48-1bf2cb322380">  
+
+
+3. Inline Styles: We create a JS object with key value pairs. See the Button component below:  
+<img width="440" alt="image" src="https://github.com/user-attachments/assets/0d6384bb-e5ab-4940-82a8-b9215314ae7c">
+
+Defining Styles:  
+
+**const styles = {
+    backgroundColor: "hsl(200, 100%, 50%)",
+    color: "white",
+    padding: "10px 20px",
+    borderRadius: "5px",
+    border: "none",
+    cursor: "pointer"
+}**
+
+
+Applying:  
+**<button style={styles}>Click me</button>**  
+
+External CSS is good for complex projects with many components. Modules for individual components. Inline for small components and individual styles. 
+
+
+
+
+
 
 
 
