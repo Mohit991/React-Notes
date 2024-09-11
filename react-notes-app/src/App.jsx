@@ -1,14 +1,9 @@
-import Food from "./components/Food";
-import Footer from "./components/Footer";
-import Header from "./components/Header"
+import UserGreeting from "./components/UserGreeting";
 function App() {
     return (
         <>
-            <Header />
-            <Food  />
-            <Footer />
+            <UserGreeting isLoggedIn = {false} username="Mohit" />
         </>
     );
 }
-
 export default App
