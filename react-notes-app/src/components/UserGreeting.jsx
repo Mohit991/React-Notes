@@ -1,11 +1,9 @@
 import React from "react";
 
-const UserGreeting = (props) => {
-  return props.isLoggedIn ? (
-    <h2> Welcom {props.username} </h2>
-  ) : (
-    <h2>Please login to continue</h2>
-  );
+const UserGreeting = ({isLoggedIn, username="Default_name"}) => {
+  const welcomeMessage = <h2 className="welcome-message"> Welcome {username} </h2>;
+  const loginPromt = <h2 className="login-prompt">Please login to continue</h2>;
+  return isLoggedIn ? welcomeMessage : loginPromt;
 };
 
 export default UserGreeting;
