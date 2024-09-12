@@ -144,6 +144,71 @@ See condition rendering in UserGreeting.jsx using ternery operator:
 
 <img width="449" alt="image" src="https://github.com/user-attachments/assets/21992888-fd8a-49be-b5da-7e966df2029d">  
 
+Another way of doing conditional rendering:  
+<img width="810" alt="image" src="https://github.com/user-attachments/assets/57ba4fab-34f2-4fd7-87a9-7ede1250fb98">  
+
+## Rendering Lists:  
+We can do simple list rendering as follows:  
+**List Component**:  
+<img width="599" alt="image" src="https://github.com/user-attachments/assets/cce6530d-ebb6-433e-a688-1d4f1b28a839">  
+
+**App Component**:  
+<img width="591" alt="image" src="https://github.com/user-attachments/assets/c8ccd2fa-0a91-4b6f-a215-3765495f9338">  
+
+**Output**:  
+<img width="364" alt="image" src="https://github.com/user-attachments/assets/140a1557-3589-44a1-be1d-1fbc4134847c">  
+
+Rednering list containing objects:  
+<img width="506" alt="image" src="https://github.com/user-attachments/assets/b4a4c509-72c6-42af-a32f-d7165afe392e">  
+
+List items must have unique keys.  
+
+**Map Method**:  
+`const listItems = fruits.map((fruit) => (
+    <li key={fruit.id}>
+      {fruit.name} &nbsp; {fruit.calories}
+    </li>
+  ));`  
+
+**Filter Method**:  
+` const lowCalFruits = fruits.filter((fruit) => fruit.calories < 100);`
+
+
+## Click Event:  
+Interaction when user clicks a specific button. We can respond to click events by passing a callback to the onclick event handler.  
+Without any parameters:  
+<img width="513" alt="image" src="https://github.com/user-attachments/assets/70a73ae9-95ba-4a71-9400-e1af1820d4b2">  
+
+With parameters:  
+<img width="671" alt="image" src="https://github.com/user-attachments/assets/50fd80d7-6540-4847-bcf1-92a76e030892">  
+
+If we use onClick with function and (), then it is called right away. We must use arrow function here:  
+<img width="741" alt="image" src="https://github.com/user-attachments/assets/88f66003-6c64-4e97-87ba-465257375c47">  
+
+When we click, we automatically get a click event. This event object describes the event that occured.  
+<img width="627" alt="image" src="https://github.com/user-attachments/assets/a6fab84e-3b76-4f36-a185-85b506de4c9a">  
+
+<img width="341" alt="image" src="https://github.com/user-attachments/assets/dea5729b-3ba9-4d87-98e0-2d87c9b6ef73">  
+
+Chaning the text of the button using the target property of the event:  
+<img width="730" alt="image" src="https://github.com/user-attachments/assets/3ec19eca-b7ec-4de7-875e-1a33aa3f5a67">  
+
+With events you can do many things. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
