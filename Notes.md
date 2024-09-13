@@ -193,7 +193,25 @@ When we click, we automatically get a click event. This event object describes t
 Chaning the text of the button using the target property of the event:  
 <img width="730" alt="image" src="https://github.com/user-attachments/assets/3ec19eca-b7ec-4de7-875e-1a33aa3f5a67">  
 
-With events you can do many things. 
+With events you can do many things.  
+
+## useState()  
+Am react hook that allows the creation of a stateful variable and a setter function to update its value in virtual DOM.  
+`const [counter, setCounter] = useState(0)`  
+counter = Name of stateful variable  
+setCounter() = Setter function for counter  
+![image](https://github.com/user-attachments/assets/929347cc-9b28-4c8d-89e7-1bf3005f523f)  
+
+When we use the setter function of a state(counter in this case) then this triggers the rerendering of the virtual DOM. This does not happen in case of normal variables. 
+See another example:  
+![image](https://github.com/user-attachments/assets/802c6337-2df6-43bf-8728-f0c2ea65525d)  
+
+## onChange()
+It is event handler primarily used form elements eg <input>, <textarea>, <select>, <radio>.  
+Trigger a function every time the value of input changes.  
+
+
+
 
 
 
