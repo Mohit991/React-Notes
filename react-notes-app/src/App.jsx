@@ -1,12 +1,8 @@
-import Food from "./components/Food";
-import Footer from "./components/Footer";
-import Header from "./components/Header"
+import ColorPicker from "./components/ColorPicker";
 function App() {
     return (
         <>
-            <Header />
-            <Food  />
-            <Footer />
+            <ColorPicker />
         </>
     );
 }
