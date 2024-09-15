@@ -232,6 +232,79 @@ Using onChange with radio buttons:
 
 shipping state variable will have whatever value you choose in the radio button. 
 
+## Excercice - Creating a color picker
+### Color Picker Component:  
+
+![image](https://github.com/user-attachments/assets/96273eb9-94de-46c7-ba28-9ac451865681)  
+
+### App Component:  
+
+
+![image](https://github.com/user-attachments/assets/2c5b94cc-5865-415c-a458-d8d4e3bfa957)  
+
+### Index.css styles:  
+
+
+![image](https://github.com/user-attachments/assets/607a0f2e-4e15-4889-87d7-892993835b74)  
+
+### Output:  
+
+![image](https://github.com/user-attachments/assets/f29a20be-53bf-46ca-bc1f-2d91c594d690)  
+
+## Updater Function:  
+A function passed as an argument to setState() usually eg. setYear(year+1).  
+This allows for safe updates based on the previous state. Used with multiple state updates and asynchronous functions. It is a good practice.  
+
+![image](https://github.com/user-attachments/assets/b8998e67-9891-43c3-a218-441d675a3ce4)  
+
+See, we have a counter, and at the click of the button we want to increment the counter by 3. But when we click the counter is only incremented by 1. This is because react batches the state updates together and does it only once. We actually make sure we change the counter by 3, we need to pass updater function to setState function.  
+Instead of  
+
+![image](https://github.com/user-attachments/assets/a44f903d-dedb-4c4d-84df-20fe90819089)  
+
+We use:  
+
+![image](https://github.com/user-attachments/assets/fd21df83-129d-4609-8ece-f1e9407800ba)  
+
+Or  
+
+![image](https://github.com/user-attachments/assets/9ffc79f6-7fba-4d65-8040-5bed9273c291)
+ 
+
+We are using an arrow function to setState to update the state. This way react will not batch together the state updates, instead, it will update them one after the other. 
+More info:  
+
+![image](https://github.com/user-attachments/assets/dc13adbe-deb9-44f1-b417-6f83eb602e57)  
+
+![image](https://github.com/user-attachments/assets/f8b560fb-1c49-4f64-b5b2-f5f322b345ca)  
+
+
+## Updating Object State Variables:  
+
+![image](https://github.com/user-attachments/assets/40633404-54f7-40b4-98cd-4c17841cd810)  
+
+We are taking the prevCar, the prev value of the car state object, after that we will 
+update this object. First, we will use the spread operator to spread the previous state object and then add our update.  
+
+## Updating Array State Variables:  
+![image](https://github.com/user-attachments/assets/aafb4036-9f8d-4f46-b30a-aeb5d3283fdb)  
+
+ 
+## Updating Arrays of Object State Variables:  
+![image](https://github.com/user-attachments/assets/0d9bf3b7-180e-4171-82e7-f6341617aef3)  
+
+![image](https://github.com/user-attachments/assets/7980e8eb-a02c-4e39-bf3e-b67ceeaa8938)  
+
+
+
+
+
+
+
+
+
+
+
 
 
 
