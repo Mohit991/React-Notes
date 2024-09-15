@@ -207,8 +207,41 @@ See another example:
 ![image](https://github.com/user-attachments/assets/802c6337-2df6-43bf-8728-f0c2ea65525d)  
 
 ## onChange()
-It is event handler primarily used form elements eg <input>, <textarea>, <select>, <radio>.  
+It is an event handler primarily used form elements eg input, textarea, select, and radio.  
 Trigger a function every time the value of input changes.  
+We can do it this way:  
+![image](https://github.com/user-attachments/assets/cbc10ce4-599b-4a7d-abec-d08a4f858749)  
+
+You can also do it this way:  
+![image](https://github.com/user-attachments/assets/eb5b9c7f-b2d0-4752-8025-499a1fb981d9)  
+
+
+We are binding the name state with the input field two-way. Any change to the name state will change the input field and it will show in the input field. Also, any changes to the input field will change the name state. This is **Two way binding.**  
+
+
+![image](https://github.com/user-attachments/assets/7c4da6b6-f52b-4249-81c7-a24a02a1d53d)  
+
+Using onChange with select and option:  
+
+![image](https://github.com/user-attachments/assets/e9dbdaf8-0b58-47f2-98dc-d9ba7a773be0)  
+
+The payment state will have whatever value you select out of the options.  
+Using onChange with radio buttons:  
+
+![image](https://github.com/user-attachments/assets/fbbe7e93-5669-4169-abe1-5a824afe6feb)  
+
+shipping state variable will have whatever value you choose in the radio button. 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
