@@ -1,10 +1,8 @@
-import ColorPicker from "./components/ColorPicker";
-import Button from "./components/Button";
-import List from "./components/List";
+import MyComponent from "./components/MyComponent";
 function App() {
   return (
     <>
-        <Button />
+        <MyComponent />
     </>
   );
 }
