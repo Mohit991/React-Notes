@@ -1,10 +1,11 @@
 import ColorPicker from "./components/ColorPicker";
+import Button from "./components/Button";
+import List from "./components/List";
 function App() {
-    return (
-        <>
-            <ColorPicker />
-        </>
-    );
+  return (
+    <>
+        <Button />
+    </>
+  );
 }
-
-export default App
+export default App;

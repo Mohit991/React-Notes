@@ -44,6 +44,193 @@ We can insert JS in JSX component using {}. We write JS code inside {}. See belo
 Using JS variable in components:<br>
 ![image](https://github.com/user-attachments/assets/ca05b642-2340-4c03-ae22-221bdc854dab)<br><br>
 
+Creating Card component and rendering it in app component:<br>
+![image](https://github.com/user-attachments/assets/13e1cd9e-117c-4e90-a6dd-6ad4a92ce4c1)<br><br>
+
+App component:<br>
+![image](https://github.com/user-attachments/assets/977daa07-0228-40c2-bd07-1529c6f028c9)<br><br>
+
+Output:<br>
+![image](https://github.com/user-attachments/assets/12bff7f3-e599-4e90-8835-5371741b58b5)<br><br>
+
+Applying styles to components:<br>
+<img width="416" alt="image" src="https://github.com/user-attachments/assets/3468c164-e568-4f4a-bfeb-69dc2f23c040"><br><br>
+
+1. We can apply External CSS by applying styles in index.css which is global CSS. <br>
+Button component:<br>
+<img width="437" alt="image" src="https://github.com/user-attachments/assets/513659a9-9eb1-4b79-bcec-5859bab6825a"><br><br>
+
+Styles are defined in index.css <br>
+<img width="509" alt="image" src="https://github.com/user-attachments/assets/c45d5d4b-d6ed-42fe-8094-f2ab1fa8e221"><br><br>
+
+But this may lead to naming conflicts. <br>
+
+2. We can create a dedicated sylesheet specifically for each component. This is called modules. What we can do is create folder inside the component folder. One seperate folder for each component. This folder will have the component and stylesheet. <br>
+See the folder structure:  <br> <br>
+<img width="242" alt="image" src="https://github.com/user-attachments/assets/e362688e-fa27-42b4-af5f-91360fa43129"> <br> <br>
+
+Button component:<br>
+<img width="529" alt="image" src="https://github.com/user-attachments/assets/0ad93e17-391c-42f2-8b7e-fc8e58f1bb4a"> <br><br>
+
+import: **import styles from './Button.module.css'** <br>
+Applying class: **className={styles.button}** <br>
+
+Module will be dedicated to a single component. There will be no naming conficts becase a unique class will be generated for you via a hashing alorithm. 
+See **Button.module.css** file:  
+<img width="536" alt="image" src="https://github.com/user-attachments/assets/bdd51dae-e6c4-4497-8d48-1bf2cb322380">  
+
+
+3. Inline Styles: We create a JS object with key value pairs. See the Button component below:  
+<img width="440" alt="image" src="https://github.com/user-attachments/assets/0d6384bb-e5ab-4940-82a8-b9215314ae7c">
+
+Defining Styles:  
+
+**const styles = {
+    backgroundColor: "hsl(200, 100%, 50%)",
+    color: "white",
+    padding: "10px 20px",
+    borderRadius: "5px",
+    border: "none",
+    cursor: "pointer"
+}**
+
+
+Applying:  
+**style={styles}**  
+
+External CSS is good for complex projects with many components. Modules for individual components. Inline for small components and individual styles.  
+
+## Props
+They are read only properties that are shared between components. A parent component can send data to a child component.  
+
+`<Component key=value />`  
+
+See the Student Component:  
+<img width="586" alt="image" src="https://github.com/user-attachments/assets/2ef10928-1118-4135-aee4-3df9e2c436f9">  
+
+We take **props** as input to the student function. 
+We use props.name, props.age, props.isStudent values from the prop in the component. 
+_Booleans do not show directly in the DOM. To show, we usually use ternary opertor (?:)._  
+
+See the app component:  
+
+<img width="439" alt="image" src="https://github.com/user-attachments/assets/4bc00a8c-3075-4e23-a079-cd0465fa1d04">  
+
+Here we call the Student component and pass name, age and isStudent values to it. See that we pass number and boolean inside {}. 
+
+Using Student component multiple times in app component and passing different props each time:  
+<img width="441" alt="image" src="https://github.com/user-attachments/assets/3b067e77-d4c6-4299-987e-4180c3b9d0c8">  
+
+Output:  
+<img width="477" alt="image" src="https://github.com/user-attachments/assets/b82c1608-7a08-4928-a6b6-f524996fe61a">  
+
+### Default Props: 
+Default values for the props in case if they are not sent from the parent component.  
+<img width="642" alt="image" src="https://github.com/user-attachments/assets/a88deb19-c063-415d-a9a8-e7f77df5d96b">  
+
+<img width="614" alt="image" src="https://github.com/user-attachments/assets/776a13ed-0fb8-4543-9dcb-fe16fe7c7ffe">  
+
+If we dont pass any value for name, it takes the default value. 
+
+## Conditional Rendering:  
+It allows you to control what gets rendered based on certain conditions.  
+See App.jsx:  
+<img width="610" alt="image" src="https://github.com/user-attachments/assets/da70e9e4-8fc4-4c45-a390-bc53644c6a23">  
+
+See condition rendering in UserGreeting.jsx using if else:  
+<img width="638" alt="image" src="https://github.com/user-attachments/assets/487ab64f-de85-4a17-bf7f-d2753cac9166">  
+
+See condition rendering in UserGreeting.jsx using ternery operator:  
+
+<img width="449" alt="image" src="https://github.com/user-attachments/assets/21992888-fd8a-49be-b5da-7e966df2029d">  
+
+Another way of doing conditional rendering:  
+<img width="810" alt="image" src="https://github.com/user-attachments/assets/57ba4fab-34f2-4fd7-87a9-7ede1250fb98">  
+
+## Rendering Lists:  
+We can do simple list rendering as follows:  
+**List Component**:  
+<img width="599" alt="image" src="https://github.com/user-attachments/assets/cce6530d-ebb6-433e-a688-1d4f1b28a839">  
+
+**App Component**:  
+<img width="591" alt="image" src="https://github.com/user-attachments/assets/c8ccd2fa-0a91-4b6f-a215-3765495f9338">  
+
+**Output**:  
+<img width="364" alt="image" src="https://github.com/user-attachments/assets/140a1557-3589-44a1-be1d-1fbc4134847c">  
+
+Rednering list containing objects:  
+<img width="506" alt="image" src="https://github.com/user-attachments/assets/b4a4c509-72c6-42af-a32f-d7165afe392e">  
+
+List items must have unique keys.  
+
+**Map Method**:  
+`const listItems = fruits.map((fruit) => (
+    <li key={fruit.id}>
+      {fruit.name} &nbsp; {fruit.calories}
+    </li>
+  ));`  
+
+**Filter Method**:  
+` const lowCalFruits = fruits.filter((fruit) => fruit.calories < 100);`
+
+
+## Click Event:  
+Interaction when user clicks a specific button. We can respond to click events by passing a callback to the onclick event handler.  
+Without any parameters:  
+<img width="513" alt="image" src="https://github.com/user-attachments/assets/70a73ae9-95ba-4a71-9400-e1af1820d4b2">  
+
+With parameters:  
+<img width="671" alt="image" src="https://github.com/user-attachments/assets/50fd80d7-6540-4847-bcf1-92a76e030892">  
+
+If we use onClick with function and (), then it is called right away. We must use arrow function here:  
+<img width="741" alt="image" src="https://github.com/user-attachments/assets/88f66003-6c64-4e97-87ba-465257375c47">  
+
+When we click, we automatically get a click event. This event object describes the event that occured.  
+<img width="627" alt="image" src="https://github.com/user-attachments/assets/a6fab84e-3b76-4f36-a185-85b506de4c9a">  
+
+<img width="341" alt="image" src="https://github.com/user-attachments/assets/dea5729b-3ba9-4d87-98e0-2d87c9b6ef73">  
+
+Chaning the text of the button using the target property of the event:  
+<img width="730" alt="image" src="https://github.com/user-attachments/assets/3ec19eca-b7ec-4de7-875e-1a33aa3f5a67">  
+
+With events you can do many things.  
+
+## useState()  
+Am react hook that allows the creation of a stateful variable and a setter function to update its value in virtual DOM.  
+`const [counter, setCounter] = useState(0)`  
+counter = Name of stateful variable  
+setCounter() = Setter function for counter  
+![image](https://github.com/user-attachments/assets/929347cc-9b28-4c8d-89e7-1bf3005f523f)  
+
+When we use the setter function of a state(counter in this case) then this triggers the rerendering of the virtual DOM. This does not happen in case of normal variables. 
+See another example:  
+![image](https://github.com/user-attachments/assets/802c6337-2df6-43bf-8728-f0c2ea65525d)  
+
+## onChange()
+It is an event handler primarily used form elements eg input, textarea, select, and radio.  
+Trigger a function every time the value of input changes.  
+We can do it this way:  
+![image](https://github.com/user-attachments/assets/cbc10ce4-599b-4a7d-abec-d08a4f858749)  
+
+You can also do it this way:  
+![image](https://github.com/user-attachments/assets/eb5b9c7f-b2d0-4752-8025-499a1fb981d9)  
+
+
+We are binding the name state with the input field two-way. Any change to the name state will change the input field and it will show in the input field. Also, any changes to the input field will change the name state. This is **Two way binding.**  
+
+
+![image](https://github.com/user-attachments/assets/7c4da6b6-f52b-4249-81c7-a24a02a1d53d)  
+
+Using onChange with select and option:  
+
+![image](https://github.com/user-attachments/assets/e9dbdaf8-0b58-47f2-98dc-d9ba7a773be0)  
+
+The payment state will have whatever value you select out of the options.  
+Using onChange with radio buttons:  
+
+![image](https://github.com/user-attachments/assets/fbbe7e93-5669-4169-abe1-5a824afe6feb)  
+
+shipping state variable will have whatever value you choose in the radio button. 
 
 
 
@@ -57,7 +244,28 @@ Using JS variable in components:<br>
 
 
 
-   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
