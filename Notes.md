@@ -295,6 +295,29 @@ update this object. First, we will use the spread operator to spread the previou
 
 ![image](https://github.com/user-attachments/assets/7980e8eb-a02c-4e39-bf3e-b67ceeaa8938)  
 
+## Creating a TODO list:  
+### ToDoList Component: 
+
+![image](https://github.com/user-attachments/assets/124ea223-c5f4-4368-84f3-11076daf8d0b)  
+
+### Index.css:  
+![image](https://github.com/user-attachments/assets/8c0c8568-d6ff-4431-a4a9-e48788a78c62)  
+
+### App.jsx: 
+![image](https://github.com/user-attachments/assets/936b889b-d8f4-4d6a-9da5-689dca2909cc)  
+
+### Output:  
+<img width="948" alt="{509E7408-DBAE-4FFD-99C6-8C6A4E47F87B}" src="https://github.com/user-attachments/assets/3d007bd5-17c9-445c-8935-9c7cfc048779">  
+
+
+
+
+
+
+
+
+
+
 
 
 
