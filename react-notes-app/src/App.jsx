@@ -1,8 +1,8 @@
-import ToDoList from "./components/ToDoList";
+import MyComponentUseEffect1 from "./components/MyComponentUseEffect1";
 function App() {
   return (
     <>
-        <ToDoList />
+        <MyComponentUseEffect1 />
     </>
   );
 }
