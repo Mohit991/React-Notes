@@ -1,8 +1,8 @@
-import MyComponentUseEffect1 from "./components/MyComponentUseEffect1";
+import DigitalClock from "./components/DigitalClock";
 function App() {
   return (
     <>
-        <MyComponentUseEffect1 />
+        <DigitalClock />
     </>
   );
 }
