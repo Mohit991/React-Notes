@@ -1,8 +1,8 @@
-import DigitalClock from "./components/DigitalClock";
+import MyComponentUseRef from "./components/useRefHook/MyComponentUseRef";
 function App() {
   return (
     <>
-        <DigitalClock />
+        <MyComponentUseRef />
     </>
   );
 }
