@@ -1,4 +1,4 @@
-# React Notes
+![image](https://github.com/user-attachments/assets/4a7d4860-aa63-471f-9975-90cbcb139683)# React Notes
 ![image](https://github.com/user-attachments/assets/5be5e0d4-30b3-4dd9-98db-dcb65e536bed)<br><br>
 React focuses on building UI for web applications using components. <br>
 ![image](https://github.com/user-attachments/assets/6bb9039a-e1ca-49f7-8408-2c9deb734e61)<br><br>
@@ -351,6 +351,153 @@ You can have any number of useEffect() in your component.
 ## Creating a digital clock
 ### Digital clock component
 ![image](https://github.com/user-attachments/assets/d802695c-2eb3-4e02-964b-773734ad91ff)  
+
+
+
+## useContext()  
+### Prop Drilling
+It allows components to share state/s between them. Otherwise we will need to send props from one component to another and then from that component to the next and so on. This is called **prop drilling**.  
+I have four components:
+1. ComponentA
+2. ComponentB
+3. ComponentC
+4. ComponentD
+
+ComponentA calls ComponentB, ComponentB calls ComponentC, ComponentC calls ComponentD. So, the flow is ComponentA ==> ComponentB ==> ComponentC ==> ComponentD  
+We have a state variable in ComponentA called user. This is the name of our user. We need to show this user name in ComponentA where it is a state and also in ComponentD whose parent is ComponentC and whose parent if ComponentB. So, we have to pass user from ComponentA ==> ComponentB ==> ComponentC ==> ComponentD. This is called **prop drilling**  
+See the below screenshots:  
+**ComponentA**:  
+![image](https://github.com/user-attachments/assets/dabcd3b7-d83f-4027-b916-5c03bf33254e)  
+
+**ComponentB**:  
+![image](https://github.com/user-attachments/assets/4df4ff5d-9961-49f6-968e-be3dd63d1875)  
+
+**ComponentC**:  
+![image](https://github.com/user-attachments/assets/1bc2cfcc-f407-4328-afaa-13d1a203df45)  
+
+**ComponentD**:
+![image](https://github.com/user-attachments/assets/ff9c289d-0ed2-455f-9bb6-540d35a34a54)  
+
+To avoid all of this we use useContext. 
+
+### useContext 
+<img width="463" alt="{5918D78C-32B1-4E27-AAB8-00B532C29A8D}" src="https://github.com/user-attachments/assets/eaa28df6-f7e8-492a-8e4a-8ca8759c6273">  
+
+Provider Component: Which component has the data. Here, it is ComponentA. 
+We have to do three things in provider component: 
+1. Import createContext from react.
+`import React, { useState, createContext } from "react";`
+2. export the context.
+`export const UserContext = createContext()`
+3. Wrap any child components within special provider component. 
+`<UserContext.Provider value={user}>
+    <ComponentB user={user} />
+</UserContext.Provider>`
+
+Any component that needs this data we will call it a consumer component.  
+For consumer components, we will need these steps:
+1. import useContext.
+`import React, {useContext} from 'react'
+import { UserContext } from './ComponentA'`
+2. use the context.
+
+Final result:  
+**ComponentA (Provider)**:  
+![image](https://github.com/user-attachments/assets/0122d8e5-5477-44ee-9fc0-2c7842b48a6a)  
+
+**ComponentD (Consumer)**: 
+![image](https://github.com/user-attachments/assets/5d9f33d7-8663-4bc3-aa25-740b35c3c596)  
+
+**Output**:  
+<img width="960" alt="{5EB5D869-950E-4525-AC7A-DC6CFDACCD14}" src="https://github.com/user-attachments/assets/4ec06b3a-06eb-4a19-8bd5-eaa1704f1e86">  
+
+## useRef()
+<img width="462" alt="{A758AFCF-F8F1-4222-A93D-02503B64D0AC}" src="https://github.com/user-attachments/assets/ae49cfb7-f79c-4e2d-801e-d273ba1d214c">  
+
+useState() stores some state for the component. When that state changes, the component is re-rendered. 
+
+userRef() is same as useState() but the component is not re-rendered when the value is changed.  
+
+**useState() triggers re-renders, useRef() does not**.  
+Using useState() first:  
+![image](https://github.com/user-attachments/assets/36652430-eece-40cb-b40c-9711b191e6d9)  
+We see that component re-renders every time number changes. We see the log.  
+### useRef()
+<img width="437" alt="{A6C920A6-26C8-4445-891B-1995EA34B24D}" src="https://github.com/user-attachments/assets/63bc060a-7f61-4a45-9b68-74b7e990b62d">  
+
+`const ref = useRef(0);`  
+ref will be an object with a value called current.  
+So, we can see ref.current. Also, we set the initial value in useRef(), just like we provide in useState(). 
+Here is how we will use the ref:  
+`function handleClick() {
+        ref.current = ref.current + 1
+        //ref.current++
+}`  
+
+Now, we are able to change or increment the value of ref.current at the click of the button using handleClick(). But, we are not re-rendering the component each time ref.current is chaning. This was not the case with useState() where every time state changes, our component is re-rendered and useEffect with no dependency array is being executed. Here, component is not re-rendering with the increment of ref.current and useEffect is not getting executed.  
+![image](https://github.com/user-attachments/assets/efca30d3-6224-4dba-9822-b708cf08d6f0)  
+
+`const ref = useRef("Mohit");
+console.log(ref);`  
+
+<img width="239" alt="{CC85606C-7D82-4A4E-B4FC-5FD284E6C749}" src="https://github.com/user-attachments/assets/5e678507-cdf0-4b7f-a06e-4959f60ed13f">  
+
+### Usage of useRef()
+The main usage of useRef() is that it can be linked to any input field.  
+In html's input elements, we need to add ref property to the input field. This is a special attribute.  
+Creating ref:  
+`const inputRef = useRef(null);`
+
+Using ref in input field:  
+`<input 
+     ref={inputRef}
+/>`  
+
+See the code:  
+![image](https://github.com/user-attachments/assets/0f775ab8-608d-415e-ae06-e6ffce37d8ed)  
+
+We have ref added to the input tag. We logged the inputRef. Let's see the log. We can see that a lot of properties are associated with the inputRef.  
+<img width="234" alt="{06F78446-30A0-4201-B34B-319B0FB27D13}" src="https://github.com/user-attachments/assets/daff35a4-b976-4770-a943-32232a1c7156">  
+
+Here inputRef.current will give us the input field.  
+See the code below:  
+![image](https://github.com/user-attachments/assets/b1eb7c7d-d56f-418e-bffd-014702804c8c)  
+
+When button is pressed, the input field is focussed. Also, the component is not re-rendered.  
+See an example:  
+![image](https://github.com/user-attachments/assets/32f059ec-88b7-4119-88b0-c1537ee31025)  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
