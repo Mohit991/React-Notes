@@ -309,6 +309,59 @@ update this object. First, we will use the spread operator to spread the previou
 ### Output:  
 <img width="948" alt="{509E7408-DBAE-4FFD-99C6-8C6A4E47F87B}" src="https://github.com/user-attachments/assets/3d007bd5-17c9-445c-8935-9c7cfc048779">  
 
+## useEffect()  
+useEffect tells react to execute some code when: 
+1. The component re-renders (when any of the state variable change)
+2. The component mounts for the first time.
+3. Some specified state/s change.
+
+`useEffect(function, [dependencies])`  
+
+Three different variations of useEffect():
+1. useEffect(() => {}) //Runs at every re-render (when any state changes) The dependency array is not mentioned.
+2. useEffect(() => {}, []) //Runs only when the component mounts the first time. Dependency array is empty.
+3. useEffect(() => {}, [state/s]) //Runs every time any of the state/s mentioned in the useEffect's dependency array changes.
+
+**Uses**:
+1. Event listerners
+2. DOM manipulation
+3. Subscriptions (real time updates)
+4. Fetching data from an API
+5. Clean up when component unmounts
+
+
+### Changing the title of the document every time the component renders ie when the component first loads/mounts and when any of the state/s of the component changes:  
+![image](https://github.com/user-attachments/assets/145aefe9-a824-4230-9fd6-c52e6d452d41)  
+
+### Changing the title of the document only the first time the component loads and never after:  
+![image](https://github.com/user-attachments/assets/790963ae-3356-4808-ad0e-9645bc9021b7)  
+
+### Changing the title of the document when the specified state/s of the component changes; in this case the state mentioned is count:  
+![image](https://github.com/user-attachments/assets/370d6f33-71eb-4ff2-97a3-67a60250a9eb)  
+
+More Info:  
+<img width="464" alt="{C72EC84B-43C2-48CF-A180-3BD8E969801F}" src="https://github.com/user-attachments/assets/5ac364f9-810a-40fa-9eac-d1ea20dd2782">  
+
+Performing some clean up when the component unmounts using useEffect(), we return a clean up function:  
+![image](https://github.com/user-attachments/assets/122d2454-b2df-4916-9e62-a6dd8ccbda30)  
+
+This code is execute when the component unmounts.  
+You can have any number of useEffect() in your component.  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
