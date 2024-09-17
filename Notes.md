@@ -348,73 +348,9 @@ Performing some clean up when the component unmounts using useEffect(), we retur
 This code is execute when the component unmounts.  
 You can have any number of useEffect() in your component.  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+## Creating a digital clock
+### Digital clock component
+![image](https://github.com/user-attachments/assets/d802695c-2eb3-4e02-964b-773734ad91ff)  
 
 
 
