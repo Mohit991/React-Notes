@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/4a7d4860-aa63-471f-9975-90cbcb139683)# React Notes
+# React Notes
 ![image](https://github.com/user-attachments/assets/5be5e0d4-30b3-4dd9-98db-dcb65e536bed)<br><br>
 React focuses on building UI for web applications using components. <br>
 ![image](https://github.com/user-attachments/assets/6bb9039a-e1ca-49f7-8408-2c9deb734e61)<br><br>
